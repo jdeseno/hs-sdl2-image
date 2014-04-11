@@ -1,7 +1,7 @@
 name:                sdl2-image
 version:             0.1.0.0
 synopsis:            Support for SDL2_image library.
-license:             MIT
+license:             PublicDomain
 license-file:        LICENSE
 author:              Joshua DeSeno <jdeseno@gmail.com>
 maintainer:          Joshua DeSeno <jdeseno@gmail.com>
