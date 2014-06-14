@@ -114,10 +114,10 @@ loadRW rwops dofree =
 foreign import ccall unsafe "IMG_LoadTexture"
   imgLoadTexture' :: Ptr RendererStruct -> CString -> IO (Ptr TextureStruct)
 
-loadTexture :: Renderer -> ImageType -> IO Texture
+loadTexture :: Renderer -> FilePath -> IO Texture
 loadTexture r t =
   withForeignPtr r $ \r' ->
-  withCString (show t) $ \t' ->
+  withCString t $ \t' ->
     imgLoadTexture' r' t' >>= mkFinalizedTexture
 
 foreign import ccall unsafe "IMG_LoadTexture_RW"
