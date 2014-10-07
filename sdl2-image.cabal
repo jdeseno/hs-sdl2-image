@@ -20,9 +20,12 @@ library
   includes:
     SDL.h,
     SDL_image.h
-  pkgconfig-depends:
-    sdl2 >= 2.0.0,
-    SDL2_image >= 2.0.0
+  
+  if !os(windows)
+    pkgconfig-depends:
+      sdl2 >= 2.0.0,
+      SDL2_image >= 2.0.0
+
   build-depends:
     base >=4,
     SDL2
